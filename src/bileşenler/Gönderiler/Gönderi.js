@@ -20,12 +20,13 @@ const Gönderi = props => {
           src={gönderi.imageUrl}
         />
       </div>
-      {/* BeğenBölümü düzgün çalışması için ihtiyaç duyduğu tüm proplara sahip mi? */}
-      <BeğenBölümü gonderiyiBegen={() => gonderiyiBegen(gönderi.id)}/>
-      {/* Yorumlar da proplara dikkat istiyor! */}
-      <Yorumlar />
+      <BeğenBölümü gonderiyiBegen={() => gonderiyiBegen(gönderi.id)} id={gönderi.id} />
+      <Yorumlar gonderi={gönderi} />
+
     </div>
+
   );
+
 };
 
 export default Gönderi;
